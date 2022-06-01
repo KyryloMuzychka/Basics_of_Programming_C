@@ -679,88 +679,88 @@
 
 
 //17
-#include <stdio.h>
-#include <stdlib.h>
-#include <conio.h>
-#include <string.h>
-#define MAXSTR 2048
-
-Fill(char string[]);
-NumberToChar(char string[], char result[]);
-
-main()
-{
-    char s[MAXSTR], res[MAXSTR], result[MAXSTR];
-    printf("s:\n");
-    Fill(s);
-    puts(s);
-    NumberToChar(s, res);
-    printf("\nres:\n");
-    puts(res);
-    printf("\n");
-    //
-    int k = 0;
-    for (int i = 32; i <= 255; i++)
-    {
-        result[k++] = i;
-        result[k++] = ',';
-
-    }
-    result[--k] = '\0';
-    puts(result);
-    //
-    _getch();
-    return 0;
-}
-
-NumberToChar(char string[], char result[])
-{
-    int i = 0, number, k = 0;
-    int amountString = strlen(string);
-    while (i < amountString)
-    {
-        number = 0;
-        while (string[i] != ',' && string[i] != '\0')
-        {
-            number *= 10;
-            number += string[i++]-48;
-        }
-        printf("%i\n", number);
-        result[k++] = number;
-        result[k++] = ',';
-        i++;
-    } 
-    result[--k] = '\0';
-}
-
-Fill(char string[])
-{
-    int i, k = 0, t, number = 0;
-    for (i = 32; i <= 255; i++)
-    {
-        t = i;
-        
-        while (t)
-        {
-            number *= 10;
-            number += t % 10;
-            t /= 10;
-        }
-        while (number)
-        {
-            string[k++] = number % 10 + 48;
-            number /= 10;
-        }
-        if (!(i % 10))
-        {
-            string[k++] = '0';
-            if (!((i/10) % 10))
-                string[k++] = '0'; 
-        }
-        string[k++] = ',';
-    }
-    string[--k] = '\0';
-}
+//#include <stdio.h>
+//#include <stdlib.h>
+//#include <conio.h>
+//#include <string.h>
+//#define MAXSTR 2048
+//
+//Fill(char string[]);
+//NumberToChar(char string[], char result[]);
+//
+//main()
+//{
+//    char s[MAXSTR], res[MAXSTR], result[MAXSTR];
+//    printf("s:\n");
+//    Fill(s);
+//    puts(s);
+//    NumberToChar(s, res);
+//    printf("\nres:\n");
+//    puts(res);
+//    printf("\n");
+//    //
+//    int k = 0;
+//    for (int i = 32; i <= 255; i++)
+//    {
+//        result[k++] = i;
+//        result[k++] = ',';
+//
+//    }
+//    result[--k] = '\0';
+//    puts(result);
+//    //
+//    _getch();
+//    return 0;
+//}
+//
+//NumberToChar(char string[], char result[])
+//{
+//    int i = 0, number, k = 0;
+//    int amountString = strlen(string);
+//    while (i < amountString)
+//    {
+//        number = 0;
+//        while (string[i] != ',' && string[i] != '\0')
+//        {
+//            number *= 10;
+//            number += string[i++]-48;
+//        }
+//        printf("%i\n", number);
+//        result[k++] = number;
+//        result[k++] = ',';
+//        i++;
+//    } 
+//    result[--k] = '\0';
+//}
+//
+//Fill(char string[])
+//{
+//    int i, k = 0, t, number = 0;
+//    for (i = 32; i <= 255; i++)
+//    {
+//        t = i;
+//        
+//        while (t)
+//        {
+//            number *= 10;
+//            number += t % 10;
+//            t /= 10;
+//        }
+//        while (number)
+//        {
+//            string[k++] = number % 10 + 48;
+//            number /= 10;
+//        }
+//        if (!(i % 10))
+//        {
+//            string[k++] = '0';
+//            if (!((i/10) % 10))
+//                string[k++] = '0'; 
+//        }
+//        string[k++] = ',';
+//    }
+//    string[--k] = '\0';
+//}
 
 
 

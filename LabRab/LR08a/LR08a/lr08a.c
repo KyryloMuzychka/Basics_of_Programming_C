@@ -6,9 +6,10 @@
 //1
 //#define MIN(a, b, c) ((((a) < (b) ? (a) : (b))) < (c) ? (((a) < (b) ? (a) : (b))) : (c))
 //2
-#define MIN2(x, y) ((x < y) ? (x) : (y))
-#define MIN(x, y, z) MIN2(MIN2((x), (y)), (z))
+//#define MIN2(x, y) ((x < y) ? (x) : (y))
+//#define MIN(x, y, z) MIN2(MIN2((x), (y)), (z))
 //3
+#define MIN(a, b, c) (((a) < (b) && (a) < (c)) ? (a) : (((b) < (c) && (b) < (a)) ? (b) : (c)))
 
 main()
 {

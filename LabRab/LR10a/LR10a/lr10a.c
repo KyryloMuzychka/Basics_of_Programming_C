@@ -36,7 +36,7 @@
 #include <conio.h>
 #define MAX 100
 
-int Fill(int a[]);
+int Fill(int *a);
 
 main()
 {
@@ -55,7 +55,7 @@ main()
 	return 0;
 }
 
-int Fill(int a[])
+int Fill(int *a)
 {
 	int n, v = 0;
 	printf("n = "); scanf_s("%i", &n);
