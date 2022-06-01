@@ -512,53 +512,53 @@
 
 
 //13
-#include <stdio.h>
-#include <stdlib.h>
-#include <conio.h>
-#include <string.h>
-#define MAXSTR 128
-
-int Replace(char string[], char substring1[], char substring2[], char result[]);
-
-main()
-{
-    char s[MAXSTR], str1[MAXSTR], str2[MAXSTR], res[MAXSTR];
-    printf("Enter a main string: "); gets_s(s, MAXSTR);
-    printf("Enter a substring 1: "); gets_s(str1, MAXSTR);
-    printf("Enter a substring 2: "); gets_s(str2, MAXSTR);
-    printf("replacement = %i\n", Replace(s, str1, str2, res));
-    puts(res);
-    _getch();
-    return 0;
-}
-
-int Replace(char string[], char substring1[], char substring2[], char result[])
-{
-    int j, v, i = 0, k = 0, s = 0, replacement = 0;
-    int amountString = strlen(string);
-    int amountSubstring1 = strlen(substring1);
-    int amountSubstring2 = strlen(substring2);
-    while (i < amountString)
-    {
-        v = i;
-        for (j = 0; j < amountSubstring1; j++)
-            if (string[i++] == substring1[j])
-                s++;
-        i = v;
-        if (amountSubstring1 == s)
-        {
-            for (j = 0; j < amountSubstring2; j++)  
-                result[k++] = substring2[j];
-            i += amountSubstring1;      
-            replacement++;
-        }
-        else            
-            result[k++] = string[i++]; 
-        s = 0;
-    }
-    result[k] = '\0';   
-    return replacement;
-}
+//#include <stdio.h>
+//#include <stdlib.h>
+//#include <conio.h>
+//#include <string.h>
+//#define MAXSTR 128
+//
+//int Replace(char string[], char substring1[], char substring2[], char result[]);
+//
+//main()
+//{
+//    char s[MAXSTR], str1[MAXSTR], str2[MAXSTR], res[MAXSTR];
+//    printf("Enter a main string: "); gets_s(s, MAXSTR);
+//    printf("Enter a substring 1: "); gets_s(str1, MAXSTR);
+//    printf("Enter a substring 2: "); gets_s(str2, MAXSTR);
+//    printf("replacement = %i\n", Replace(s, str1, str2, res));
+//    puts(res);
+//    _getch();
+//    return 0;
+//}
+//
+//int Replace(char string[], char substring1[], char substring2[], char result[])
+//{
+//    int j, v, i = 0, k = 0, s = 0, replacement = 0;
+//    int amountString = strlen(string);
+//    int amountSubstring1 = strlen(substring1);
+//    int amountSubstring2 = strlen(substring2);
+//    while (i < amountString)
+//    {
+//        v = i;
+//        for (j = 0; j < amountSubstring1; j++)
+//            if (string[i++] == substring1[j])
+//                s++;
+//        i = v;
+//        if (amountSubstring1 == s)
+//        {
+//            for (j = 0; j < amountSubstring2; j++)  
+//                result[k++] = substring2[j];
+//            i += amountSubstring1;      
+//            replacement++;
+//        }
+//        else            
+//            result[k++] = string[i++]; 
+//        s = 0;
+//    }
+//    result[k] = '\0';   
+//    return replacement;
+//}
 
 //14
 //#include <stdio.h>
