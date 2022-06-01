@@ -787,7 +787,7 @@
 //
 //main()
 //{
-//	int  u[MAX], m[MAX], * pm = m, *pu = u, n = 0, s = 0, max = 0, j, k = 0;
+//	int  u[MAX], m[MAX], * pm = m, *pu = u, n = 0, s = 1, max = 0, j, k = 0;
 //	do
 //	{
 //		printf("m[%i] = ", n);
@@ -812,12 +812,12 @@
 //			}
 //			if (max < s)
 //			{
-//				max = ++s;
+//				max = s;
 //				while (k < max)
 //					m[k++] = u[j++];
 //			}
 //			k = 0;
-//			s = 0;
+//			s = 1;
 //		}
 //		else
 //			i++;
